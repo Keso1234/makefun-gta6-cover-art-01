@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Coast — GTA 6-style Cover Studio</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">NC</span><span class="brand-name">Neon Coast</span><span class="brand-sub">GTA 6-style Cover Studio</span></div>
+  <p class="offline-note">Offline · your photos never leave this machine · original art, no Rockstar logos or fonts</p>
+</header>
+<main class="app">
+  <aside class="controls" aria-label="Cover controls">
+    <section class="group" id="photos-group">
+      <h2>1 · Photos</h2>
+      <label class="file-label">Add your photos <input id="photoUpload" type="file" accept="image/*" multiple></label>
+      <div class="row">
+        <button id="sampleBoulevard" type="button">Sample: Boulevard</button>
+        <button id="samplePier" type="button">Sample: Pier</button>
+      </div>
+      <button id="fillAll" type="button">Fill every panel with both samples</button>
+      <p class="hint">Two free sample photos are built in, so the studio works with no upload.</p>
+    </section>
+
+    <section class="group" id="layout-group">
+      <h2>2 · Layout</h2>
+      <div class="layout-grid" id="layoutGrid" role="group" aria-label="Layout"></div>
+    </section>
+
+    <section class="group" id="grade-group">
+      <h2>3 · Sunset grade</h2>
+      <div class="grade-grid" id="gradeGrid" role="group" aria-label="Grade"></div>
+      <label class="check"><input id="grainToggle" type="checkbox" checked> Film grain</label>
+      <label class="check"><input id="vignetteToggle" type="checkbox" checked> Vignette</label>
+      <label class="check"><input id="halftoneToggle" type="checkbox" checked> Halftone title block</label>
+      <label class="check"><input id="sunToggle" type="checkbox" checked> Retro sun</label>
+    </section>
+
+    <section class="group" id="words-group">
+      <h2>4 · Words</h2>
+      <label>Title <input id="titleInput" type="text" maxlength="24" value="NEON SHORE"></label>
+      <label>Neon subtitle <input id="subtitleInput" type="text" maxlength="40" value="Vice City nights"></label>
+      <label>Badge ribbon <input id="badgeInput" type="text" maxlength="18" value="EST. 2026"></label>
+      <label>Title font
+        <select id="titleFont">
+          <option value="Anton">Anton — heavy poster</option>
+          <option value="Bebas Neue">Bebas Neue — tall caps</option>
+        </select>
+      </label>
+      <label>Heat meter <span id="heatValue">★★★★☆</span>
+        <input id="heatInput" type="range" min="1" max="5" step="1" value="4">
+      </label>
+    </section>
+
+    <section class="group" id="panel-group">
+      <h2>5 · Selected panel</h2>
+      <p class="hint" id="panelLabel">Panel 1 — click a panel in the preview to select it.</p>
+      <div class="row" id="panelPhotoRow" aria-label="Photo for selected panel"></div>
+      <label>Zoom <input id="zoomInput" type="range" min="1" max="3" step="0.01" value="1.15"></label>
+      <label>Move left / right <input id="panXInput" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label>
+      <label>Move up / down <input id="panYInput" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label>
+      <button id="resetCrop" type="button">Reset this panel's crop</button>
+    </section>
+
+    <section class="group" id="export-group">
+      <h2>6 · Export</h2>
+      <div class="size-row" role="group" aria-label="Export size">
+        <label class="size"><input type="radio" name="exportSize" value="1080x1080"> 1080 × 1080</label>
+        <label class="size"><input type="radio" name="exportSize" value="1080x1350"> 1080 × 1350</label>
+        <label class="size"><input type="radio" name="exportSize" value="1920x1080" checked> 1920 × 1080</label>
+      </div>
+      <button id="exportPng" type="button" class="primary">Export PNG</button>
+      <button id="exportAll" type="button">Export all 3 sizes at once</button>
+      <div class="row">
+        <button id="undoBtn" type="button">Undo</button>
+        <button id="redoBtn" type="button">Redo</button>
+        <button id="shuffleBtn" type="button">Shuffle look</button>
+      </div>
+      <p id="status" role="status">Ready — pick a layout and export.</p>
+    </section>
+  </aside>
+
+  <section class="preview" aria-label="Cover preview">
+    <div class="canvas-wrap"><canvas id="cover" width="1920" height="1080" aria-label="The cover"></canvas></div>
+    <div class="panel-chips" id="panelChips" aria-label="Panels"></div>
+    <p class="hint">Drag inside a panel to move its photo · scroll over it to zoom · click a panel to select it.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
