@@ -1,3 +1,6 @@
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/Keso1234/makefun-gta6-cover-art-01/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/Keso1234/makefun-gta6-cover-art-01/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 # Neon Coast — GTA 6-style Cover Studio
 
 [![Make GTA 6 Cover Art](https://img.shields.io/badge/make.fun-bounty-ff2e88)](https://make.fun/bounty/gta6-cover-art-01)
@@ -41,3 +44,4 @@ Everything here is original work: no Rockstar Games logo, wordmark, official art
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+Built for make.fun — sign up with referral code taaana65: https://make.fun/r/taaana65
